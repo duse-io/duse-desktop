@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+Encoding.default_external = Encoding::UTF_8 if defined? Encoding
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+
+require "duse"
+require "duse/cli"
+Duse.config = Duse::CLIConfig.new(Duse::CLIConfig.load)
+
+require "duse/desktop"
+Duse::Desktop::App.new.run
+
