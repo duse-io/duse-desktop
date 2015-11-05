@@ -1,2 +1,7 @@
 source "https://rubygems.org"
-gemspec
+
+gem "duse", github: "duse-io/duse.rb"
+
+group :development do
+  gem "pry"
+end
